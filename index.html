@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script>
+    const numeros = [
+      '558596391843',
+      '558581141843',
+      '558585913861',
+      '558584300807',
+      '558588902940'
+    ];
+
+    const escolhido = numeros[Math.floor(Math.random() * numeros.length)];
+    const url = `https://wa.me/${escolhido}?text=Olá%2C+gostaria+de+mais+informações`;
+
+    // Redirecionamento imediato
+    location.replace(url);
+  </script>
+</head>
+<body></body>
+</html>
