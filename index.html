@@ -16,11 +16,11 @@
 
       const escolhido = numeros[Math.floor(Math.random() * numeros.length)];
 
-      // Mensagem personalizada
-      const mensagem = 'Olá, gostaria de mais informações sobre o Fala Nutri';
-      const url = `https://wa.me/${escolhido}?text=${encodeURIComponent(mensagem)}`;
+      // Mensagem codificada
+      const mensagem = encodeURIComponent('Olá, gostaria de mais informações sobre o Fala Nutri');
+      const url = `https://wa.me/${escolhido}?text=${mensagem}`;
 
-      // Redirecionamento automático
+      // Redirecionamento
       window.location.replace(url);
     });
   </script>
