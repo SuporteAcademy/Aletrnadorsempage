@@ -2,22 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecionando...</title>
+  <title>Redirecionando para WhatsApp...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    const numeros = [
-      '558596391843',
-      '558581141843',
-      '558585913861',
-      '558584300807',
-      '558588902940'
-    ];
+    document.addEventListener('DOMContentLoaded', function () {
+      const numeros = [
+        '558596391843',
+        '558581141843',
+        '558585913861',
+        '558584300807',
+        '558588902940'
+      ];
 
-    const escolhido = numeros[Math.floor(Math.random() * numeros.length)];
-    const url = `https://wa.me/${escolhido}?text=Olá%2C+gostaria+de+mais+informações+sobre+o+Fala+Nutri`;
+      const escolhido = numeros[Math.floor(Math.random() * numeros.length)];
 
-    // Redirecionamento imediato
-    location.replace(url);
+      // Mensagem personalizada
+      const mensagem = 'Olá, gostaria de mais informações';
+      const url = `https://wa.me/${escolhido}?text=${encodeURIComponent(mensagem)}`;
+
+      // Redirecionamento automático
+      window.location.replace(url);
+    });
   </script>
 </head>
-<body></body>
+<body>
+  <p>Redirecionando para o WhatsApp...</p>
+</body>
 </html>
